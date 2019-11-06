@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -12,11 +11,6 @@
    <children>
        <AnchorPane fx:id="FixedSimulate" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #ccffff;">
            <children>
-               <JFXButton fx:id="runButton" layoutX="14.0" layoutY="555.0" prefHeight="26.0" prefWidth="162.0" style="-fx-background-color: green; -fx-background-radius: 13;" text="Run Simulation" textFill="WHITE">
-                   <font>
-                       <Font name="System Bold" size="14.0" />
-                   </font>
-               </JFXButton>
                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="859.0" layoutY="12.0" onMouseClicked="#exitProgram" pickOnBounds="true" preserveRatio="true">
                    <image>
                        <Image url="@../image/close.jpg" />
@@ -27,17 +21,32 @@
                        <Font name="System Bold" size="20.0" />
                    </font>
                </Label>
-               <Label layoutX="187.0" layoutY="556.0" prefHeight="27.0" prefWidth="182.0" text="Total Time               :">
+               <Label layoutX="26.0" layoutY="556.0" prefHeight="27.0" prefWidth="182.0" text="Total Time               :">
                    <font>
                        <Font name="System Bold" size="18.0" />
                    </font>
                </Label>
-               <Label fx:id="timeTotal" layoutX="380.0" layoutY="558.0" prefHeight="27.0" prefWidth="99.0">
+               <Label fx:id="timeTotal" layoutX="208.0" layoutY="556.0" prefHeight="27.0" prefWidth="99.0">
                    <font>
                        <Font name="System Bold" size="18.0" />
                    </font>
                </Label>
             <Label layoutX="369.0" layoutY="556.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="26.0" layoutY="359.0" text="Waiting List">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="380.0" layoutY="556.0" prefHeight="27.0" prefWidth="304.0" text="Average Internal Fragmentation    :">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="timeTotal1" layoutX="694.0" layoutY="556.0" prefHeight="27.0" prefWidth="141.0">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>

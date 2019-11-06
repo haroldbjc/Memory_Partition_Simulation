@@ -35,7 +35,10 @@ public class FixedSimulation {
     public LinkedList<BlockList> queue = new LinkedList<>();
     public LinkedList<BlockList> wait = new LinkedList<>();
     public boolean runAdd = true;
-    public Label timeTotal;
+    public Label timeTotal, timeTotal1;
+    public int internalFragmentation = 0;
+    public int jobDone = 0;
+
 
     public void initialize() {
 
@@ -68,7 +71,8 @@ public class FixedSimulation {
 
         }
         for (int o = 0; o < Main.Data.getBlockSize(); o++) segmentX[o][1] = 0;
-
+        timeTotal.setText(Integer.toString(0));
+        timeTotal1.setText(Integer.toString(0));
     }
 
     //    public void addJob(ActionEvent event){
@@ -86,6 +90,12 @@ public class FixedSimulation {
                             jobMemory[i][2]--;
                             blocks[j] = null;
                             segmentX[j][1] = 0;
+                            internalFragmentation+=(blockArray[j]- jobMemory[i][3]);
+                            jobDone++;
+                            timeTotal1.setText(Integer.toString(internalFragmentation/jobDone));
+                            //System.out.println(internalFragmentation);
+                            //System.out.println(jobDone);
+                            //System.out.println(internalFragmentation/jobDone);
                         }
                     }
                 } else if ((jobMemory[i][2] > 0) && (jobMemory[i][1] == -2)) {

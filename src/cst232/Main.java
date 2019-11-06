@@ -78,6 +78,11 @@ public class Main extends Application {
             }
             return a;
         }
+
+        public int getBlockMemory(int index){
+            return Block[index];
+        }
+
         public static void setInteger(int[][] integer) { Integer = integer; }
 
         public static void setTotal(String total) {
