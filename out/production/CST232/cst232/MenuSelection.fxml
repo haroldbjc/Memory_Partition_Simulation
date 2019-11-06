@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="PartitionStack" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="cst232.Menu">
+   <children>
+      <AnchorPane fx:id="PartitionPane" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #ccffff;">
+         <children>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="856.0" layoutY="14.0" onMouseClicked="#exitProgram" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/close.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="35.0" layoutY="44.0" text="Select Partition Scheme">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="nextB" layoutX="35.0" layoutY="103.0" onAction="#fixedSchemeButton" prefHeight="38.0" prefWidth="221.0" style="-fx-background-color: green; -fx-background-radius: 13;" text="Fixed Partition Scheme" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="35.0" layoutY="154.0" onAction="#dynamicSchemeButton" style="-fx-background-color: green; -fx-background-radius: 15;" text="Dynamic Partition Scheme" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="826.0" layoutY="14.0" onMouseClicked="#backMenu" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/back.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="FixedSchemePane" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #ccffff;" visible="false">
+         <children>
+            <JFXButton layoutX="29.0" layoutY="261.0" onAction="#runFixedSimulate" prefHeight="26.0" prefWidth="162.0" style="-fx-background-color: green; -fx-background-radius: 13;" text="Run Simulation" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="829.0" layoutY="12.0" onMouseClicked="#fixedBack" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/back.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="859.0" layoutY="12.0" onMouseClicked="#exitProgram" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/close.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="14.0" layoutY="15.0" text="Fixed Partition Scheme" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="29.0" layoutY="101.0" text="Total Memory Block :  ">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="fixedMemoryBox" focusColor="BLACK" layoutX="221.0" layoutY="94.0" prefHeight="26.0" prefWidth="86.0" unFocusColor="BLACK" visibleRowCount="4" />
+            <Label layoutX="29.0" layoutY="138.0" prefHeight="27.0" prefWidth="182.0" text="Total Job                   :">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="fixedJobField" layoutX="215.0" layoutY="138.0" prefHeight="27.0" prefWidth="99.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="29.0" layoutY="173.0" prefHeight="27.0" prefWidth="182.0" text="Allocation Method   :">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="fixedStyle" focusColor="BLACK" layoutX="221.0" layoutY="173.0" prefHeight="26.0" prefWidth="190.0" unFocusColor="BLACK" visibleRowCount="4" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="DynamicSchemePane" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #ccffff;" visible="false">
+         <children>
+            <JFXButton layoutX="29.0" layoutY="261.0" onAction="#runDynamicSimulate" prefHeight="26.0" prefWidth="162.0" style="-fx-background-color: green; -fx-background-radius: 13;" text="Run Simulation" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="829.0" layoutY="12.0" onMouseClicked="#dynamicBack" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/back.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="859.0" layoutY="12.0" onMouseClicked="#exitProgram" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/close.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="14.0" layoutY="15.0" text="Dynamic Partition Scheme" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="29.0" layoutY="101.0" text="Memory Size             :  ">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="dynamicMemoryBox" focusColor="WHITE" labelFloat="true" layoutX="219.0" layoutY="101.0" prefHeight="26.0" prefWidth="130.0" visibleRowCount="4" />
+            <Label layoutX="29.0" layoutY="138.0" prefHeight="27.0" prefWidth="182.0" text="Total Job                   :">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="fixedJobField1" layoutX="215.0" layoutY="138.0" prefHeight="27.0" prefWidth="99.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="28.0" layoutY="179.0" text="Allocation Method   :  ">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="dynamicStyle" focusColor="WHITE" labelFloat="true" layoutX="218.0" layoutY="179.0" prefHeight="26.0" prefWidth="130.0" visibleRowCount="4" />
+         </children>
+      </AnchorPane>
+
+   </children>
+</StackPane>

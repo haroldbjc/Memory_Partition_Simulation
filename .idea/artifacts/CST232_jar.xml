@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="CST232:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/CST232_jar</output-path>
+    <root id="archive" name="CST232.jar">
+      <element id="module-output" name="CST232" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/cslib/jfoenix-8.0.2.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

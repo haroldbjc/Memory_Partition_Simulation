@@ -1,0 +1,9 @@
+#button {
+    -fx-background-color: #ffffff;
+    -fx-alignment: center;
+    -fx-font-weight: bold;
+    -fx-border-color: #000000;
+    -fx-border-width: 3;
+    -fx-border-radius:13px;
+}
+

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="DynamicSimulateStack" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="cst232.DynamicSimulation">
+   <children>
+      <AnchorPane fx:id="DynamicSimulate" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #ccffff;">
+         <children>
+            <JFXButton fx:id="runButton" layoutX="14.0" layoutY="555.0" prefHeight="26.0" prefWidth="162.0" style="-fx-background-color: green; -fx-background-radius: 13;" text="Run Simulation" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="859.0" layoutY="12.0" onMouseClicked="#exitProgram" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/close.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="14.0" layoutY="15.0" text="Dynamic Partition Scheme Simulation" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="187.0" layoutY="556.0" prefHeight="27.0" prefWidth="182.0" text="Total Time               :">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="timeTotal" layoutX="380.0" layoutY="558.0" prefHeight="27.0" prefWidth="99.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="369.0" layoutY="556.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="85.0" layoutX="15.0" layoutY="55.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: red;" width="870.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

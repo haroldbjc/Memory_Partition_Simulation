@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="parentContainer1" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="cst232.Menu">
+   <children>
+      <AnchorPane fx:id="MenuMainPane" prefHeight="600.0" prefWidth="900.0">
+         <children>
+            <Label layoutX="292.0" layoutY="101.0" text="Memory Partition Simulation">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="304.0" layoutY="212.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/file.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="304.0" layoutY="288.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/file.jpg" />
+               </image>
+            </ImageView>
+            <JFXButton focusTraversable="false" id="button" fx:id="nextButton" layoutX="425.0" layoutY="388.0" onAction="#nextMenu" stylesheets="@text.css" text="Next" />
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="856.0" layoutY="14.0" onMouseClicked="#exitProgram" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/close.jpg" />
+               </image>
+            </ImageView>
+            <Label fx:id="memoryFilePath" layoutX="466.0" layoutY="237.0" prefHeight="20.0" prefWidth="189.0" text="src/cst232/Memorylist.txt" />
+            <Label fx:id="jobFilePath" layoutX="465.0" layoutY="303.0" prefHeight="20.0" prefWidth="190.0" text="src/cst232/Joblist.txt" />
+            <JFXButton focusTraversable="false" id="button" layoutX="354.0" layoutY="221.0" onAction="#chooseMemoryTxt" stylesheets="@text.css" text="Browse" />
+            <JFXButton focusTraversable="false" id="button" layoutX="354.0" layoutY="297.0" onAction="#chooseJobTxt" stylesheets="@text.css" text="Browse" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
